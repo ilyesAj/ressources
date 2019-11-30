@@ -33,9 +33,9 @@ public class Reservation {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((person == null) ? 0 : person.hashCode());
-		result = prime * result + ((room == null) ? 0 : room.hashCode());
-		result = prime * result + ((timeSlot == null) ? 0 : timeSlot.hashCode());
+		result = prime * result + ((person.get() == null) ? 0 : person.get().hashCode());
+		result = prime * result + ((room.get() == null) ? 0 : room.get().hashCode());
+		result = prime * result + ((timeSlot.get() == null) ? 0 : timeSlot.get().hashCode());
 		return result;
 	}
 
@@ -48,20 +48,20 @@ public class Reservation {
 		if (getClass() != obj.getClass())
 			return false;
 		Reservation other = (Reservation) obj;
-		if (person.get() == null) {
-			if (other.person.get() != null)
+		if (person.get().getId() == null) {
+			if (other.person.get().getId() != null)
 				return false;
-		} else if (!person.get().equals(other.person.get()))
+		} else if (!person.get().getId().equals(other.person.get().getId()))
 			return false;
-		if (room.get() == null) {
-			if (other.room.get() != null)
+		if (room.get().getId() == null) {
+			if (other.room.get().getId() != null)
 				return false;
-		} else if (!room.get().equals(other.room.get()))
+		} else if (!room.get().getId().equals(other.room.get().getId()))
 			return false;
 		if (timeSlot.get() == null) {
-			if (other.timeSlot.get() != null)
+			if (other.timeSlot.get().getId() != null)
 				return false;
-		} else if (!timeSlot.get().equals(other.timeSlot.get()))
+		} else if (!timeSlot.get().getId().equals(other.timeSlot.get().getId()))
 			return false;
 		return true;
 	}

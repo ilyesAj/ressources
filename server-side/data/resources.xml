@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <resources>
+    <person>
+        <email>aa@bb.cc</email>
+        <firstName>ii</firstName>
+        <id>77df972a-7d2c-46b5-b624-ff9e4cc7f3c7</id>
+        <lastName>BE</lastName>
+        <status>Teacher</status>
+    </person>
+    <room>
+        <building>A</building>
+        <capacity>20</capacity>
+        <id>5d4c3058-d996-4a6d-a606-bdcdf2eec496</id>
+        <name>aqua</name>
+    </room>
     <timeslot>
         <day>2019-11-30</day>
         <end>12:10</end>
