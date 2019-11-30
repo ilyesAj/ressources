@@ -377,8 +377,10 @@ public class Main {
 						new Room(roomId, roomName, capacity, buildingName));
 
 				try {
-					resourcesManager.editReservation(reservation,
-							new TimeSlot(newTimeSlotId, newStart, newEnd, newDay));
+					resourcesManager.deleteReservation(reservation);
+					resourcesManager.createReservation(reservation.getPerson(), reservation.getRoom(), new TimeSlot(newTimeSlotId, newStart, newEnd, newDay));
+					//resourcesManager.editReservation(reservation,
+					//		new TimeSlot(newTimeSlotId, newStart, newEnd, newDay));
 					result = "{ \"result\" : \"ok\" }";
 				} catch (NullElementException e) {
 					// TODO Auto-generated catch block
