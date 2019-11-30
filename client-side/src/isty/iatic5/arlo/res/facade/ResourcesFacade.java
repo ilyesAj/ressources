@@ -59,7 +59,7 @@ public class ResourcesFacade implements ResourcesInterface{
 	 */
 	public ResourcesFacade() {
 		// Initialisation du gestionnaire de BDD
-		restCli = new RestClient("192.168.0.14","4567");
+		restCli = new RestClient("0.0.0.0","4567");
 		
 	}
 

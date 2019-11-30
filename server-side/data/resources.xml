@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <resources>
-    <person>
-        <email>aa@bb.cc</email>
-        <firstName>ii</firstName>
-        <id>77df972a-7d2c-46b5-b624-ff9e4cc7f3c7</id>
-        <lastName>BE</lastName>
-        <status>Teacher</status>
-    </person>
     <reservation>
         <person>77df972a-7d2c-46b5-b624-ff9e4cc7f3c7</person>
         <room>5d4c3058-d996-4a6d-a606-bdcdf2eec496</room>
