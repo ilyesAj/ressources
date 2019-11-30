@@ -38,6 +38,7 @@ public class MainApp {
 
 		JsonParser jsonParser = new JsonParser();
 
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 
 		while (true) {

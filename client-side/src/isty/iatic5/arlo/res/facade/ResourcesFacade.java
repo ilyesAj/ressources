@@ -1,11 +1,14 @@
 package isty.iatic5.arlo.res.facade;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.ini4j.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -56,10 +59,13 @@ public class ResourcesFacade implements ResourcesInterface{
 
 	/**
 	 * Constructeur
+	 * @throws IOException 
+	 * @throws InvalidFileFormatException 
 	 */
-	public ResourcesFacade() {
+	public ResourcesFacade() throws InvalidFileFormatException, IOException {
 		// Initialisation du gestionnaire de BDD
-		restCli = new RestClient("0.0.0.0","4567");
+		Ini config = new Ini(new File("urlConfig.ini"));
+		restCli = new RestClient(config.get("Server","URL"),config.get("Server","PORT"));
 		
 	}
 

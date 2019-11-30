@@ -1,5 +1,9 @@
 package isty.iatic5.arlo.res;
 
+import java.io.IOException;
+
+import org.ini4j.InvalidFileFormatException;
+
 import isty.iatic5.arlo.res.facade.ResourcesFacade;
 import isty.iatic5.arlo.res.facade.ResourcesInterface;
 import isty.iatic5.arlo.res.view.MainGUI;
@@ -14,8 +18,10 @@ public class MainApp {
 	/**
 	 * Fonction main, point d'entrée du programme
 	 * @param args
+	 * @throws IOException 
+	 * @throws InvalidFileFormatException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InvalidFileFormatException, IOException {
 		// Instanciation de l'objet exposant les fonctionnalités
 		ResourcesInterface resourcesManager = new ResourcesFacade();
 		

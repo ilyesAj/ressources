@@ -1,26 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<resources>
-    <reservation>
-        <person>77df972a-7d2c-46b5-b624-ff9e4cc7f3c7</person>
-        <room>5d4c3058-d996-4a6d-a606-bdcdf2eec496</room>
-        <timeSlot>e87ad973-87b7-4cac-b031-37e3ef1e768e</timeSlot>
-    </reservation>
-    <room>
-        <building>A</building>
-        <capacity>20</capacity>
-        <id>5d4c3058-d996-4a6d-a606-bdcdf2eec496</id>
-        <name>aqua</name>
-    </room>
-    <timeslot>
-        <day>2019-11-30</day>
-        <end>12:10</end>
-        <id>e87ad973-87b7-4cac-b031-37e3ef1e768e</id>
-        <start>11:00</start>
-    </timeslot>
-    <timeslot>
-        <day>2019-11-30</day>
-        <end>22:00</end>
-        <id>868fa7e8-7c79-466b-875e-5a07573a70d6</id>
-        <start>20:00</start>
-    </timeslot>
-</resources>
+<resources/>
