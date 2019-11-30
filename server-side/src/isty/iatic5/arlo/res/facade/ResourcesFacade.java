@@ -47,7 +47,7 @@ public class ResourcesFacade implements ResourcesInterface {
 	/**
 	 * Gestionnaire de la BDD
 	 */
-	private DatabaseManager dataBaseManager;
+	public DatabaseManager dataBaseManager;
 
 	/**
 	 * Constructeur
@@ -162,8 +162,12 @@ public class ResourcesFacade implements ResourcesInterface {
 	public void deletePerson(Person person) throws NullElementException, ExistingReferenceException {
 		if (person != null) {
 			if (Validators.isPersonDeleteSafe(person, reservationData)) {
+				System.out.println("********************************************************************************************************************************************");
+				System.out.println(personData);
 				personData.remove(person);
+				System.out.println(personData);
 				dataBaseManager.saveResources();
+				
 			} else {
 				throw new ExistingReferenceException(person.getClass().getSimpleName(), person.getId());
 			}

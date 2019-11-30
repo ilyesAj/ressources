@@ -21,6 +21,31 @@ import javafx.beans.property.StringProperty;
  */
 public class TimeSlot {
 	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((id.get() == null) ? 0 : id.get().hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		TimeSlot other = (TimeSlot) obj;
+		if (id.get() == null) {
+			if (other.id.get() != null)
+				return false;
+		} else if (!id.get().equals(other.id.get()))
+			return false;
+		return true;
+	}
+
 	private final StringProperty id;
 	private final ObjectProperty<LocalTime> start; 
 	private final ObjectProperty<LocalTime> end;	

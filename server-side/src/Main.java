@@ -55,11 +55,12 @@ public class Main {
 				try {
 					resourcesManager.createPerson(personId, firstName, lastName, email, status);
 					result = "{ \"result\" : \"ok\" }";
+					
 				} catch (InvalidInputException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-
+				
 				return result;
 			}
 		});

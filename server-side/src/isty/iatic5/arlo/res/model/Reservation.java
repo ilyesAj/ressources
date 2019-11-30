@@ -7,7 +7,7 @@ import javafx.beans.property.SimpleObjectProperty;
 
 /**
  * Classe représentant une réservation
- *  
+ * 
  * @author Clément Lefevre
  *
  */
@@ -15,8 +15,8 @@ public class Reservation {
 	private final ObjectProperty<TimeSlot> timeSlot;
 	private final ObjectProperty<Person> person;
 	private final ObjectProperty<Room> room;
-	
-	/** 
+
+	/**
 	 * Constructor
 	 * 
 	 * @param timeSlot
@@ -28,51 +28,88 @@ public class Reservation {
 		this.person = new SimpleObjectProperty<Person>(person);
 		this.room = new SimpleObjectProperty<Room>(room);
 	}
-	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((person == null) ? 0 : person.hashCode());
+		result = prime * result + ((room == null) ? 0 : room.hashCode());
+		result = prime * result + ((timeSlot == null) ? 0 : timeSlot.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Reservation other = (Reservation) obj;
+		if (person.get() == null) {
+			if (other.person.get() != null)
+				return false;
+		} else if (!person.get().equals(other.person.get()))
+			return false;
+		if (room.get() == null) {
+			if (other.room.get() != null)
+				return false;
+		} else if (!room.get().equals(other.room.get()))
+			return false;
+		if (timeSlot.get() == null) {
+			if (other.timeSlot.get() != null)
+				return false;
+		} else if (!timeSlot.get().equals(other.timeSlot.get()))
+			return false;
+		return true;
+	}
+
 	/**
 	 * Constructeur par défaut
 	 */
 	public Reservation() {
 		this(null, null, null);
 	}
-    
-    @XmlIDREF
-    public TimeSlot getTimeSlot() {
-        return timeSlot.get();
-    }
 
-    public void setTimeSlot(TimeSlot timeSlot) {
-        this.timeSlot.set(timeSlot);
-    }
-    
-    public ObjectProperty<TimeSlot> timeSlotProperty() {
-        return timeSlot;
-    }
-    
-    @XmlIDREF
-    public Person getPerson() {
-        return person.get();
-    }
+	@XmlIDREF
+	public TimeSlot getTimeSlot() {
+		return timeSlot.get();
+	}
 
-    public void setPerson(Person person) {
-        this.person.set(person);
-    }
-    
-    public ObjectProperty<Person> personProperty() {
-        return person;
-    }
-    
-    @XmlIDREF
-    public Room getRoom() {
-        return room.get();
-    }
+	public void setTimeSlot(TimeSlot timeSlot) {
+		this.timeSlot.set(timeSlot);
+	}
 
-    public void setRoom(Room room) {
-        this.room.set(room);
-    }
-    
-    public ObjectProperty<Room> roomProperty() {
-        return room;
-    }
-	
+	public ObjectProperty<TimeSlot> timeSlotProperty() {
+		return timeSlot;
+	}
+
+	@XmlIDREF
+	public Person getPerson() {
+		return person.get();
+	}
+
+	public void setPerson(Person person) {
+		this.person.set(person);
+	}
+
+	public ObjectProperty<Person> personProperty() {
+		return person;
+	}
+
+	@XmlIDREF
+	public Room getRoom() {
+		return room.get();
+	}
+
+	public void setRoom(Room room) {
+		this.room.set(room);
+	}
+
+	public ObjectProperty<Room> roomProperty() {
+		return room;
+	}
+
 }

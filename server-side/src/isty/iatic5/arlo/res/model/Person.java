@@ -74,11 +74,42 @@ public class Person {
         this.lastName.set(lastName);
     }
 
-    public StringProperty lastNameProperty() {
+    @Override
+	public String toString() {
+		return "Person [id=" + id.get() + ", firstName=" + firstName.get() + ", lastName=" + lastName.get() + ", email=" + email.get()
+				+ ", status=" + status.get() + "]";
+	}
+
+	public StringProperty lastNameProperty() {
         return lastName;
     }
 
-    public String getEmail() {
+    @Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((id.get() == null) ? 0 : id.get().hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Person other = (Person) obj;
+		if (id.get() == null) {
+			if (other.id.get() != null)
+				return false;
+		} else if (!id.get().equals(other.id.get()))
+			return false;
+		return true;
+	}
+
+	public String getEmail() {
     	return email.get();
     }
 

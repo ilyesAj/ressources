@@ -1,86 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <resources>
-    <person>
-        <email>clement.lefevre@ens.uvsq.fr</email>
-        <firstName>Clément </firstName>
-        <id>df9e262c-a966-4f2a-af94-0480be1d08f4</id>
-        <lastName>Lefevre</lastName>
-        <status>Student</status>
-    </person>
-    <person>
-        <email>xxccccx@gmail.com</email>
-        <firstName>asba</firstName>
-        <id>1234</id>
-        <lastName>kbira</lastName>
-        <status>Teacher</status>
-    </person>
-    <person>
-        <email>xxccccx@gmail.com</email>
-        <firstName>uge</firstName>
-        <id>12333334</id>
-        <lastName>kbira</lastName>
-        <status>Teacher</status>
-    </person>
-    <person>
-        <email>xxccccx@gmail.com</email>
-        <firstName>uge</firstName>
-        <id>12333334</id>
-        <lastName>kbira</lastName>
-        <status>Teacher</status>
-    </person>
-    <person>
-        <email>xxccccx@gmail.com</email>
-        <firstName>uge</firstName>
-        <id>12333334</id>
-        <lastName>kbira</lastName>
-        <status>Teacher</status>
-    </person>
-    <person>
-        <email>xxccccx@gmail.com</email>
-        <firstName>uge</firstName>
-        <id>12333334</id>
-        <lastName>kbira</lastName>
-        <status>Teacher</status>
-    </person>
-    <reservation>
-        <person>1234</person>
-        <room>1234</room>
-        <timeSlot>1234</timeSlot>
-    </reservation>
-    <room>
-        <building>Mermoz</building>
-        <capacity>100</capacity>
-        <id>588ba4dc-423b-428e-bd29-6dfd12286972</id>
-        <name>Amphi A</name>
-    </room>
-    <room>
-        <building>Mermoz</building>
-        <capacity>45</capacity>
-        <id>2e6d938d-fb91-4380-b533-d41d10b8bbf0</id>
-        <name>Salle 111</name>
-    </room>
-    <room>
-        <building>Mermoz</building>
-        <capacity>40</capacity>
-        <id>608ce4e2-6277-4766-a03f-e25393182076</id>
-        <name>Salle 113</name>
-    </room>
     <timeslot>
-        <day>2019-11-04</day>
-        <end>09:00</end>
-        <id>8c1d51bc-e432-472f-89ed-e965cf08eee0</id>
-        <start>08:00</start>
-    </timeslot>
-    <timeslot>
-        <day>2019-11-03</day>
-        <end>10:00</end>
-        <id>db0370cd-089a-47b5-9788-4d8a3cdb53ed</id>
-        <start>09:00</start>
-    </timeslot>
-    <timeslot>
-        <day>2019-11-03</day>
-        <end>10:30</end>
-        <id>056c6fe3-0696-437c-9517-663e18589e74</id>
-        <start>08:31</start>
+        <day>2019-11-30</day>
+        <end>12:10</end>
+        <id>e87ad973-87b7-4cac-b031-37e3ef1e768e</id>
+        <start>11:00</start>
     </timeslot>
 </resources>

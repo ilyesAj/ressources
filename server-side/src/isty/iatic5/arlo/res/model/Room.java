@@ -91,4 +91,31 @@ public class Room {
 	public StringProperty buildingProperty() {
 		return building;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((id.get() == null) ? 0 : id.get().hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Room other = (Room) obj;
+		if (id.get() == null) {
+			if (other.id.get() != null)
+				return false;
+		} else if (!id.get().equals(other.id.get()))
+			return false;
+		return true;
+	}
+	
+	
 }
