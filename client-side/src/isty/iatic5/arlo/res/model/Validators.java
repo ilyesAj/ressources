@@ -140,7 +140,7 @@ public class Validators {
 	 */
 	public static boolean isPersonDeleteSafe(Person p, List<Reservation> reservationData) {
 		for(Reservation r: reservationData) {
-			if(p.getId() == r.getPerson().getId()) 
+			if(p.getId().equals( r.getPerson().getId())) 
 				return false;
 		}	
 		return true;
@@ -154,7 +154,7 @@ public class Validators {
 	 */
 	public static boolean isRoomDeleteSafe(Room r, List<Reservation> reservationData) {		
 		for(Reservation res: reservationData) {
-			if(r.getId() == res.getRoom().getId()) 
+			if(r.getId().equals( res.getRoom().getId())) 
 				return false;
 		}	
 		return true;
@@ -168,7 +168,7 @@ public class Validators {
 	 */
 	public static boolean isTSDeleteSafe(TimeSlot t, List<Reservation> reservationData) {
 		for(Reservation r: reservationData) {
-			if(t.getId() == r.getTimeSlot().getId()) 
+			if(t.getId().equals( r.getTimeSlot().getId()) )
 				return false;
 		}	
 		return true;

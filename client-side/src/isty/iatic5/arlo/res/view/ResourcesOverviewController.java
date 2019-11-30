@@ -425,10 +425,10 @@ public class ResourcesOverviewController {
 	 */
 	@FXML
 	private void handleRefresh() {
-		personTable.refresh();
-		roomTable.refresh();
-		timeSlotTable.refresh();
-		reservationTable.refresh();		
+		personTable.setItems(this.resourcesManager.getPersonData());
+		roomTable.setItems(this.resourcesManager.getRoomData());
+		timeSlotTable.setItems(this.resourcesManager.getTimeSlotData());
+		reservationTable.setItems(this.resourcesManager.getReservationData());
 	}
 
 	/**

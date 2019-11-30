@@ -1,2 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<resources/>
+<resources>
+    <person>
+        <email>aa@bb.com</email>
+        <firstName>Iheb</firstName>
+        <id>add2b861-36ad-4b64-b02d-49194b7018bf</id>
+        <lastName>BESBES</lastName>
+        <status>Teacher</status>
+    </person>
+    <person>
+        <email>aa@bb.cc</email>
+        <firstName>Sami</firstName>
+        <id>a7b71432-e26e-40d8-bf56-f1f8152e3cf0</id>
+        <lastName>Fakhfakh</lastName>
+        <status>Teacher</status>
+    </person>
+    <person>
+        <email>cy@jo.co</email>
+        <firstName>Cyrine</firstName>
+        <id>50fdc1a5-c041-46a9-bdf3-c4a1f801d7c8</id>
+        <lastName>Joober</lastName>
+        <status>Teacher</status>
+    </person>
+    <person>
+        <email>il@aj.co</email>
+        <firstName>Ilyess</firstName>
+        <id>09661b37-ba66-404c-8988-1fc3ee885a9c</id>
+        <lastName>AJROUD</lastName>
+        <status>Teacher</status>
+    </person>
+    <room>
+        <building>A</building>
+        <capacity>20</capacity>
+        <id>901e72ee-fc39-4a2a-8518-1a29c144a397</id>
+        <name>aqua</name>
+    </room>
+    <timeslot>
+        <day>2019-11-30</day>
+        <end>12:00</end>
+        <id>852b4a94-8366-4aaa-ae2e-e537f6094c9c</id>
+        <start>11:00</start>
+    </timeslot>
+    <timeslot>
+        <day>2019-11-30</day>
+        <end>10:00</end>
+        <id>576b640b-1fc9-4c6c-9942-f6f4db03b832</id>
+        <start>08:00</start>
+    </timeslot>
+</resources>

@@ -80,12 +80,11 @@ public class ResourcesFacade implements ResourcesInterface{
 	public void createPerson(String id, String firstName, String lastName, String email, Status status) throws InvalidInputException {
 		String errmsg = Validators.isPersonValid(firstName, lastName, email, status);
 		if(errmsg == "") {
-			Person newPerson = new Person(id, firstName, lastName, email, status);
 			String res = restCli.postCreatePerson(id,firstName,lastName,email, status.name());
 			JSONObject obj = new JSONObject(res);
 			if (obj.getString("result").equals("ok"))
 			{
-				this.personData.add(newPerson);
+				this.personData = getPersonData ();
 			}
 			else 
 			{
@@ -104,11 +103,10 @@ public class ResourcesFacade implements ResourcesInterface{
 		String errmsg = Validators.isRoomValid(roomName, roomCapacity, roomBuilding);
 		String res = restCli.postCreateRoom(id, roomName, roomCapacity.toString(), roomBuilding);
 		if(errmsg == "") {
-			Room newRoom = new Room(id, roomName, roomCapacity, roomBuilding);
 			JSONObject obj = new JSONObject(res);
 			if (obj.getString("result").equals("ok"))
 			{
-				this.roomData.add(newRoom);
+				this.roomData = getRoomData();
 			}
 			else 
 			{
@@ -126,14 +124,14 @@ public class ResourcesFacade implements ResourcesInterface{
 	public void createTimeSlot(String id, LocalDate day, LocalTime start, LocalTime end) throws InvalidInputException{
 		String errmsg = Validators.isTimeSlotValid(start, end, day);
 		if(errmsg == "") {
-			TimeSlot newTS = new TimeSlot(id, start, end, day);
 			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 			String j = day.format(formatter);
 			String res = restCli.postCreateTimeSlot(id, j, start.toString(), end.toString());
 			JSONObject obj = new JSONObject(res);
 			if (obj.getString("result").equals("ok"))
 			{
-				this.timeSlotData.add(newTS);			}
+				this.timeSlotData = getTimeSlotData();
+			}
 			else 
 			{
 				throw new InvalidInputException(res);
@@ -151,7 +149,6 @@ public class ResourcesFacade implements ResourcesInterface{
 	public void createReservation(Person person, Room room, TimeSlot timeSlot) throws InvalidInputException{
 		String errmsg = Validators.isReservationValid(person, room, timeSlot, reservationData);
 		if(errmsg == "") {
-			Reservation newRes = new Reservation(timeSlot, person, room);
 			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 			String j = timeSlot.getDay().format(formatter);
 			String res = restCli.postCreateReservation(person.getId(), person.getFirstName(), person.getLastName(), person.getEmail(), person.getStatus().name(), room.getId(),room.getName(), room.getCapacity().toString(),
@@ -159,7 +156,8 @@ public class ResourcesFacade implements ResourcesInterface{
 			JSONObject obj = new JSONObject(res);
 			if (obj.getString("result").equals("ok"))
 			{
-				this.reservationData.add(newRes);		}
+				this.reservationData = getReservationData();	
+			}
 			else 
 			{
 				throw new InvalidInputException(res);
@@ -204,7 +202,7 @@ public class ResourcesFacade implements ResourcesInterface{
 				JSONObject obj = new JSONObject(res);
 				if (obj.getString("result").equals("ok"))
 				{
-					personData.remove(person);
+					this.personData = getPersonData();
 				}
 				else 
 				{
@@ -238,7 +236,7 @@ public class ResourcesFacade implements ResourcesInterface{
 				JSONObject obj = new JSONObject(res);
 				if (obj.getString("result").equals("ok"))
 				{
-					roomData.remove(room);
+					this.roomData = getRoomData();
 				}
 				else 
 				{
@@ -274,7 +272,7 @@ public class ResourcesFacade implements ResourcesInterface{
 				JSONObject obj = new JSONObject(res);
 				if (obj.getString("result").equals("ok"))
 				{
-					timeSlotData.remove(timeSlot);
+					this.timeSlotData = getTimeSlotData();
 				}
 				else 
 				{
@@ -309,7 +307,7 @@ public class ResourcesFacade implements ResourcesInterface{
 			JSONObject obj = new JSONObject(res);
 			if (obj.getString("result").equals("ok"))
 			{
-				reservationData.remove(reservation);
+				this.reservationData = getReservationData();
 			}
 			else 
 			{
@@ -356,7 +354,7 @@ public class ResourcesFacade implements ResourcesInterface{
 				if (obj.getString("result").equals("ok"))
 				{
 					
-					toEditReservation.setTimeSlot(timeSlot);
+					this.reservationData = getReservationData();
 					
 					
 				}
