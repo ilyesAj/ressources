@@ -62,7 +62,8 @@ rm -rf client/ server-deployment/ release0.1.tar.gz
 [swagger IU](https://app.swaggerhub.com/apis/ilyesAj/arlo/1.0.0?fbclid=IwAR2DQsu3hgSgAWDf9My-P_cgGShrTRksIPQbeyXEQsftARN2MiDd0KoabDk)
 # REST API documentation 
 [API](https://ilyesaj.github.io/swagger-ressources/)
-this page is generating from this [Repo](https://github.com/ilyesAj/swagger-ressources)
+
+API page is generated from this [Repo](https://github.com/ilyesAj/swagger-ressources)
 # Custom config 
 Default port for client and the server is `4567` , to modify this port you need to modify 2 files :
 - Client side : modify `client/urlConfig.ini`
