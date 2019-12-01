@@ -1,13 +1,10 @@
-# Ressources
-## Architecture
-### MVC Client Serveur
+# Architecture
+## MVC Client Serveur
 ![Architecture MVC Client Serveur](docs/mvc.png)
-### Architecture constatée
+## Architecture constatée
 ![Architecture constatée](docs/archcon.png)
-### Architecture obtenue
+## Architecture obtenue
 ![Architecture obtenue](docs/archics.png)
-
-
 # Install
 ## Technical requirements
 - access to internet
@@ -60,6 +57,11 @@ sudo docker rmi arlo:server
 ````
 rm -rf client/ server-deployment/ release0.1.tar.gz
 ````
+# API
+## Open API 
+[swagger IU](https://app.swaggerhub.com/apis/ilyesAj/arlo/1.0.0?fbclid=IwAR2DQsu3hgSgAWDf9My-P_cgGShrTRksIPQbeyXEQsftARN2MiDd0KoabDk)
+# REST API 
+[API](https://ilyesaj.github.io/swagger-ressources/)
 # Custom config 
 Default port for client and the server is `4567` , to modify this port you need to modify 2 files :
 - Client side : modify `client/urlConfig.ini`
