@@ -81,13 +81,13 @@ Exception in thread "main" java.lang.NoClassDefFoundError: javafx/collections/FX
 ````
 solution : your java version is not supported : refer to install oracle-java 8 section 
 # Exigences satisfaites
-Req-arc-08 : Le système est composé de deux parties : un client présentant l'IHM et un serveur gérant les données (priorité 1)
-Req-arc-09 : Le client et le serveur peuvent être déployés sur deux machines distinctes (priorité 1)
-Req-arc-10 : La communication entre client et serveur passe par une API REST (priorité 1)
-Req-arc-11 : Le port d'écoute du serveur est paramétrable via un fichier dans un format standard (XML, JSON, YAML ou INI) (priorité 2)
-Req-arc-12 : Le serveur utilisé par le client est paramétrable via un fichier dans un format standard (XML, JSON, YAML ou INI) (priorité 2)
-Req-arc-13 : Le déploiement du serveur passe par une unique commande (priorité 3).
-Req-arc-14 : Le démarrage du serveur passe par une unique commande (priorité 3).
-Req-arc-15 : L'arrêt du serveur passe par une unique commande (priorité 3).
-Req-arc-16 : L'API REST utilisée est exprimée en OpenAPI (priorité 4).
+Req-arc-08 : Le système est composé de deux parties : un client présentant l'IHM et un serveur gérant les données (priorité 1) . 
+Req-arc-09 : Le client et le serveur peuvent être déployés sur deux machines distinctes (priorité 1) . 
+Req-arc-10 : La communication entre client et serveur passe par une API REST (priorité 1) . 
+Req-arc-11 : Le port d'écoute du serveur est paramétrable via un fichier dans un format standard (XML, JSON, YAML ou INI) (priorité 2) . 
+Req-arc-12 : Le serveur utilisé par le client est paramétrable via un fichier dans un format standard (XML, JSON, YAML ou INI) (priorité 2) . 
+Req-arc-13 : Le déploiement du serveur passe par une unique commande (priorité 3).  
+Req-arc-14 : Le démarrage du serveur passe par une unique commande (priorité 3).  
+Req-arc-15 : L'arrêt du serveur passe par une unique commande (priorité 3).  
+Req-arc-16 : L'API REST utilisée est exprimée en OpenAPI (priorité 4).  
 
