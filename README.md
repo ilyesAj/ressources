@@ -4,7 +4,7 @@
 \- \- \- ->: Communication asynchrone.  
 ## Architecture constatée
 ![Architecture constatée](docs/archcon.png)
----->(Rouge): Flux constatée.  
+---->(Rouge): Flux constaté.  
 ## Architecture obtenue
 ![Architecture obtenue](docs/archics.png)
 # Install
