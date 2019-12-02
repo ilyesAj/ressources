@@ -1,8 +1,10 @@
 # Architecture
 ## MVC Client Serveur
 ![Architecture MVC Client Serveur](docs/mvc.png)
+- - - ->: Communication asynchrone.  
 ## Architecture constatée
 ![Architecture constatée](docs/archcon.png)
+---->(Rouge): Flux constatée.  
 ## Architecture obtenue
 ![Architecture obtenue](docs/archics.png)
 # Install
